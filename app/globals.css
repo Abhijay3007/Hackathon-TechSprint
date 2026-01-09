@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 @import "tw-animate-css";
+=======
+@import 'tailwindcss';
+@import 'tw-animate-css';
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
 
 @custom-variant dark (&:is(.dark *));
 
@@ -10,9 +15,15 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
+<<<<<<< HEAD
   --primary: oklch(0.585 0.233 255.51); /* Reverting to civic blue for primary color */
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.967 0.001 286.375);
+=======
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -46,7 +57,11 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
+<<<<<<< HEAD
   --primary: oklch(0.707 0.165 254.62); /* Brighter blue for primary in dark mode */
+=======
+  --primary: oklch(0.985 0 0);
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -75,8 +90,13 @@
 }
 
 @theme inline {
+<<<<<<< HEAD
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
+=======
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

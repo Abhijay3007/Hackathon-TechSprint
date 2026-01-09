@@ -18,7 +18,10 @@ export default function ReportIssuePage() {
   const [title, setTitle] = useState("")
   const [category, setCategory] = useState("")
   const [description, setDescription] = useState("")
+<<<<<<< HEAD
   const [location, setLocation] = useState("")
+=======
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
   const [files, setFiles] = useState<File[]>([])
 
   useEffect(() => {
@@ -47,7 +50,10 @@ export default function ReportIssuePage() {
       title,
       category,
       description,
+<<<<<<< HEAD
       location,
+=======
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
       status: "Pending",
       date: new Date().toISOString(),
       files: files.map((f) => ({ name: f.name, type: f.type, size: f.size })),
@@ -102,6 +108,7 @@ export default function ReportIssuePage() {
               </div>
 
               <div className="space-y-2">
+<<<<<<< HEAD
                 <Label htmlFor="location">Location of Issue *</Label>
                 <Input
                   id="location"
@@ -113,6 +120,8 @@ export default function ReportIssuePage() {
               </div>
 
               <div className="space-y-2">
+=======
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
                 <Label htmlFor="description">Description *</Label>
                 <Textarea
                   id="description"

@@ -5,10 +5,15 @@ import { useRouter } from "next/navigation"
 import { DashboardLayout } from "@/components/dashboard-layout"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge"
 import { AlertCircle, CheckCircle, Clock, TrendingUp, Calendar } from "lucide-react"
 import Link from "next/link"
 import { AIChat } from "@/components/ai-chat"
+=======
+import { AlertCircle, CheckCircle, Clock, TrendingUp } from "lucide-react"
+import Link from "next/link"
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -36,6 +41,7 @@ export default function DashboardPage() {
 
   const totalReports = reports.length
   const resolvedCount = reports.filter((r) => r.status === "Resolved").length
+<<<<<<< HEAD
   const inProgressCount = reports.filter((r) => r.status === "In Progress").length
   const pendingCount = reports.filter((r) => r.status === "Pending").length
 
@@ -65,6 +71,10 @@ export default function DashboardPage() {
     }
   }
 
+=======
+  const pendingCount = reports.filter((r) => r.status === "Pending").length
+
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
   return (
     <DashboardLayout>
       <div className="space-y-8">
@@ -74,6 +84,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Stats Cards */}
+<<<<<<< HEAD
         <div className="grid gap-4 md:grid-cols-4">
           <Card className="border-2 hover:shadow-md transition-shadow">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -96,11 +107,32 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold text-foreground">{resolvedCount}</div>
+=======
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">Total Reports</CardTitle>
+              <TrendingUp className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{totalReports}</div>
+              <p className="text-xs text-muted-foreground mt-1">Lifetime reports</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">Resolved</CardTitle>
+              <CheckCircle className="h-4 w-4 text-green-600" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{resolvedCount}</div>
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
               <p className="text-xs text-muted-foreground mt-1">
                 {totalReports > 0 ? Math.round((resolvedCount / totalReports) * 100) : 0}% resolution rate
               </p>
             </CardContent>
           </Card>
+<<<<<<< HEAD
           <Card className="border-2 hover:shadow-md transition-shadow">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium">In Progress</CardTitle>
@@ -122,6 +154,15 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold text-foreground">{pendingCount}</div>
+=======
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <CardTitle className="text-sm font-medium">Pending</CardTitle>
+              <Clock className="h-4 w-4 text-orange-600" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{pendingCount}</div>
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
               <p className="text-xs text-muted-foreground mt-1">Awaiting review</p>
             </CardContent>
           </Card>
@@ -135,6 +176,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             {reports.length === 0 ? (
+<<<<<<< HEAD
               <div className="text-center py-12">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <AlertCircle className="w-8 h-8 text-primary" />
@@ -145,17 +187,28 @@ export default function DashboardPage() {
                 </p>
                 <Link href="/dashboard/report">
                   <Button size="lg">Report Your First Issue</Button>
+=======
+              <div className="text-center py-8">
+                <p className="text-muted-foreground mb-4">No reports yet</p>
+                <Link href="/dashboard/report">
+                  <Button>Report Your First Issue</Button>
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
                 </Link>
               </div>
             ) : (
               <>
+<<<<<<< HEAD
                 <div className="space-y-3">
+=======
+                <div className="space-y-4">
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
                   {reports
                     .slice(0, 5)
                     .reverse()
                     .map((report) => (
                       <div
                         key={report.id}
+<<<<<<< HEAD
                         className="flex items-center justify-between p-4 border-2 rounded-lg hover:bg-muted/50 transition-all hover:shadow-md group"
                       >
                         <div className="flex items-center gap-4 flex-1">
@@ -181,6 +234,40 @@ export default function DashboardPage() {
                 <div className="mt-6 text-center pt-4 border-t">
                   <Link href="/dashboard/report">
                     <Button size="lg">Report New Issue</Button>
+=======
+                        className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <AlertCircle className="w-5 h-5 text-blue-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-medium">{report.title}</h3>
+                            <p className="text-sm text-muted-foreground">
+                              {report.category} • {new Date(report.date).toLocaleDateString()}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <span
+                            className={`text-sm px-3 py-1 rounded-full ${
+                              report.status === "Resolved"
+                                ? "bg-green-100 text-green-700"
+                                : report.status === "In Progress"
+                                  ? "bg-blue-100 text-blue-700"
+                                  : "bg-orange-100 text-orange-700"
+                            }`}
+                          >
+                            {report.status}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+                <div className="mt-6 text-center">
+                  <Link href="/dashboard/report">
+                    <Button>Report New Issue</Button>
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
                   </Link>
                 </div>
               </>
@@ -188,7 +275,10 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
       <AIChat />
+=======
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
     </DashboardLayout>
   )
 }

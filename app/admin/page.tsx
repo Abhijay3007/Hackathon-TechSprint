@@ -209,6 +209,7 @@ export default function AdminPage() {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   {selectedReport.location && (
                     <div>
                       <h4 className="font-medium mb-2">Location</h4>
@@ -216,6 +217,8 @@ export default function AdminPage() {
                     </div>
                   )}
 
+=======
+>>>>>>> b90544f0e5dc3992c6a98b7aa224ec70286208a6
                   <div>
                     <h4 className="font-medium mb-2">Description</h4>
                     <p className="text-sm text-muted-foreground">{selectedReport.description}</p>
